@@ -51,6 +51,11 @@ app.get("/api/search", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("🎬 Welcome to the Movie API backend. Use /api/popular or /api/search.");
+});
+
+
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
 });
